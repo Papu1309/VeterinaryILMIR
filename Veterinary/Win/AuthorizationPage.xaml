@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Veterinary.Win"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="800" Background="Beige"
       Title="AuthorizationPage">
 
     <Grid>
@@ -23,11 +23,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock FontSize="35" VerticalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="4" TextAlignment="Center"><Run Language="ru-ru" Text="Авторизация"/></TextBlock>
-        <TextBlock Text="Логин" FontSize="18"  Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock FontSize="35" VerticalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="4" TextAlignment="Center"><Run Language="ru-ru" Text="Авторизация" FontSize="40" FontStyle="Italic" FontWeight="Bold" /></TextBlock>
+        <TextBlock Text="Логин" FontSize="18"  Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Top" FontStyle="Italic"/>
         <TextBox x:Name="loginTxb" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Width="250" Height="50" TextAlignment="Center" FontSize="22" Padding="5"/>
-        <TextBlock Text="Пароль" FontSize="18"  Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Text="Пароль" FontSize="18"  Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Top" FontStyle="Italic"/>
         <PasswordBox x:Name="parolTxb" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Width="250" Height="50"  FontSize="22" Padding="5"/>
-        <Button x:Name="btnVhodd" Content="Войти"  Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Width="200" Height="50" Click="btnVhodd_Click"/>
+        <Button x:Name="btnVhodd" Content="Войти"  Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Width="200" Height="80" Click="btnVhodd_Click" FontStyle="Italic" Background="Green" FontSize="20" Margin="33,22,33,40" HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
 </Page>

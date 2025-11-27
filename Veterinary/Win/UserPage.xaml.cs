@@ -36,9 +36,19 @@ namespace Veterinary.Win
 
         private void LoadAppointments()
         {
-            appointments = DB.vet.Appointments.Where(a => a.doctor_id == _user.id_doctors && a.is_deleted == false).ToList();
-            lvAppointments.ItemsSource = appointments;
-            this.DataContext = this;
+            if (_user != null && _user.id_doctors > 0)
+            {
+                appointments = DB.vet.Appointments
+                    .Where(a => a.doctor_id == _user.id_doctors && a.is_deleted == false)
+                    .ToList();
+
+                lvAppointments.ItemsSource = appointments;
+            }
+            else
+            {
+                appointments = new List<Appointments>();
+                lvAppointments.ItemsSource = appointments;
+            }
         }
        
         private void btnApplyFilter_Click(object sender, RoutedEventArgs e)
@@ -128,6 +138,26 @@ namespace Veterinary.Win
         private void lvAppointments_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void btnResetFilter_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dpDateTo.SelectedDate = DateTime.Today;
+
+                txtAnimalSearch.Text = string.Empty;
+
+                LoadAppointments();
+
+                MessageBox.Show("Фильтры сброшены", "Информация",
+                              MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при сбросе фильтров: {ex.Message}", "Ошибка",
+                              MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

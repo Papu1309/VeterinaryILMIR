@@ -15,13 +15,12 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Veterinary.Connection;
 
-
 namespace Veterinary.Win
 {
     /// <summary>
-    /// Логика взаимодействия для RegistrationPage.xaml
+    /// Логика взаимодействия для AdminPage.xaml
     /// </summary>
-    public partial class RegistrationPage : Page
+    public partial class AdminPage : Page
     {
         public static ObservableCollection<User> sotrudniks { get; set; }
         public static User AuthorisationSotr(string login, string password)
@@ -38,7 +37,7 @@ namespace Veterinary.Win
             }
         }
         public static User user;
-        public RegistrationPage()
+        public AdminPage()
         {
             InitializeComponent();
         }
@@ -61,11 +60,6 @@ namespace Veterinary.Win
         private void btnVhod_Копировать_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AuthorizationPage());
-        }
-
-        private void btnAdmin_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new UserPage(user));
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Veterinary.Win"
         mc:Ignorable="d"
-        Title="AddWindow" Height="450" Width="800">
+        Title="AddWindow" Height="450" Width="800" Background="Beige">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -18,9 +18,9 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Дата приёма:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+        <TextBlock Text="Дата приёма:" Grid.Row="0" Grid.Column="0" Margin="5" FontStyle="Italic"/>
         <DatePicker x:Name="dpDate" Grid.Row="0" Grid.Column="1" Margin="5"/>
-        <TextBlock Text="Животное:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+        <TextBlock Text="Животное:" Grid.Row="1" Grid.Column="0" Margin="5" FontStyle="Italic"/>
         <ComboBox x:Name="cbAnimal" Grid.Row="1" Grid.Column="1" Margin="5" Width="500" HorizontalAlignment="Left">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -30,8 +30,8 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-           <Button x:Name="btnAdd" Content="Добавить животное" Margin="0 0 20 0" Grid.Row="1" Grid.Column="1" Width="150" Height="50"   Click="btnAdd_Click"  HorizontalAlignment="Right"/>
-        <TextBlock Text="Врач:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+        <Button x:Name="btnAdd" Content="Добавить животное" Margin="0 0 20 0" Grid.Row="1" Grid.Column="1" Width="150" Height="50"   Click="btnAdd_Click"  HorizontalAlignment="Right" FontStyle="Italic" Background="LawnGreen" FontSize="13"/>
+        <TextBlock Text="Врач:" Grid.Row="2" Grid.Column="0" Margin="5" FontStyle="Italic"/>
         <ComboBox x:Name="cbDoc" Grid.Row="2" Grid.Column="1"  Margin="5">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -43,12 +43,12 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <TextBlock Text="Комментарий:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+        <TextBlock Text="Комментарий:" Grid.Row="3" Grid.Column="0" Margin="5" FontStyle="Italic"/>
         <TextBox x:Name="tbComment" Grid.Row="3" Grid.Column="1" Margin="5" 
                  AcceptsReturn="True" TextWrapping="Wrap" Height="60"/>
         <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="btnSave" Content="Сохранить" Width="100" Height="50" Margin="5" Click="btnSave_Click"/>
-            <Button x:Name="btnCancel" Content="Отмена" Width="100" Height="50" Margin="5" Click="btnCancel_Click"/>
+            <Button x:Name="btnSave" Content="Сохранить" Width="100" Height="50" Margin="5" Click="btnSave_Click" FontStyle="Italic" Background="Green" FontSize="15"/>
+            <Button x:Name="btnCancel" Content="Отмена" Width="100" Height="50" Margin="5" Click="btnCancel_Click" FontStyle="Italic" Background="Red" FontSize="15"/>
         </StackPanel>
     </Grid>
 </Window>

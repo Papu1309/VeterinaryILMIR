@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Veterinary.Win"
         mc:Ignorable="d"
-        Title="AddAnimal" Height="450" Width="800">
+        Title="AddAnimal" Height="450" Width="800" Background="Beige">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -19,9 +19,9 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Кличка:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+        <TextBlock Text="Кличка:" Grid.Row="0" Grid.Column="0" Margin="5" FontStyle="Italic"/>
         <TextBox x:Name="txtName" Grid.Row="0" Grid.Column="1" Margin="5" Width="500" HorizontalAlignment="Left"/>
-        <TextBlock Text="Пол:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+        <TextBlock Text="Пол:" Grid.Row="1" Grid.Column="0" Margin="5" FontStyle="Italic"/>
         <ComboBox x:Name="cbGender" Grid.Row="1" Grid.Column="1" Margin="5" Width="500" HorizontalAlignment="Left">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -29,7 +29,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <TextBlock Text="Вид животного:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+        <TextBlock Text="Вид животного:" Grid.Row="2" Grid.Column="0" Margin="5" FontStyle="Italic"/>
         <ComboBox x:Name="cbType" Grid.Row="2" Grid.Column="1" Margin="5" Width="500" HorizontalAlignment="Left">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -37,13 +37,13 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <TextBlock Text="Вес (кг):" Grid.Row="3" Grid.Column="0" Margin="5"/>
+        <TextBlock Text="Вес (кг):" Grid.Row="3" Grid.Column="0" Margin="5" FontStyle="Italic"/>
         <TextBox x:Name="txtWeight" Grid.Row="3" Grid.Column="1" Margin="5" Width="150" HorizontalAlignment="Left"/>
-        <TextBlock Text="Рост (см):" Grid.Row="4" Grid.Column="0" Margin="5"/>
+        <TextBlock Text="Рост (см):" Grid.Row="4" Grid.Column="0" Margin="5" FontStyle="Italic"/>
         <TextBox x:Name="txtHeight" Grid.Row="4" Grid.Column="1" Margin="5" Width="150" HorizontalAlignment="Left"/>
         <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="btnSave" Content="Сохранить" Width="100" Height="50" Margin="5" Click="btnSave_Click"/>
-            <Button x:Name="btnCancel" Content="Отмена" Width="100" Height="50" Margin="5" Click="btnCancel_Click"/>
+            <Button x:Name="btnSave" Content="Сохранить" Width="100" Height="50" Margin="5" Click="btnSave_Click" FontStyle="Italic" Background="Green" FontSize="15"/>
+            <Button x:Name="btnCancel" Content="Отмена" Width="100" Height="50" Margin="5" Click="btnCancel_Click" FontStyle="Italic" Background="Red" FontSize="15"/>
         </StackPanel>
 
     </Grid>
